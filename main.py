@@ -64,7 +64,7 @@ def html_tem(data):
 
 driver.get('https://mail.google.com/mail/u/0/#inbox')
 
-subject = "Registration Confirmation from http://example.com/"
+subject = "Registration Confirmation from iskool71.com"
 
 with open("employee_list.json", "r") as read_file:data = json.load(read_file)
 for p in data:
@@ -74,7 +74,7 @@ for p in data:
         sub=subject, 
         mbody=html_tem(p)):
         print(f"Send successful! {p['email']}")
-        time.sleep(1)
     else:
         raise(f"Error {p['email']}")
+    time.sleep(1)
 # driver.quit()
